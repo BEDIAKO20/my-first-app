@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import ClassProps from "./Components/ClassProps";
+import FunctionalProps from "./Components/FunctionalProps";
 
 function App() {
+  let height = "6.2ft";
+  let weight = "87kg";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ClassProps userHeight={height} />
+      <FunctionalProps userWeight={weight} />
     </div>
   );
 }
