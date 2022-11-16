@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button, Card } from "react-bootstrap";
-
+import { v4 as uuidv4 } from "uuid";
 const Forms = (props) => {
   const [studentName, setStudentName] = useState("");
   const [studentGen, setStudentGen] = useState(0);
@@ -11,8 +11,9 @@ const Forms = (props) => {
     const newStudent = {
       name: studentName,
       gen: studentGen,
+      id: uuidv4(),
     };
-
+    console.log(newStudent);
     props.addStudent(newStudent);
   };
 

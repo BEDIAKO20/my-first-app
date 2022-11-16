@@ -8,11 +8,9 @@ const Users = (props) => {
     <div>
       {students.map((item) => {
         return (
-          <div>
+          <div key={item.id}>
             <Row>
-              <Col md={4}>
-                <User student={item} />
-              </Col>
+              <User student={item} editUser={props.editUser} />
             </Row>
           </div>
         );
